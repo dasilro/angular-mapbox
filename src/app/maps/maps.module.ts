@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { MapsRoutingModule } from './maps-routing.module';
 import { MiniMapComponent } from './components/mini-map/mini-map.component';
-import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { MapsLayoutComponent } from './layout/maps-layout/maps-layout.component';
 import { FullScreenPageComponent } from './pages/full-screen-page/full-screen-page.component';
 import { MarkersPageComponent } from './pages/markers-page/markers-page.component';
@@ -13,13 +12,14 @@ import { ZoomRangePageComponent } from './pages/zoom-range-page/zoom-range-page.
 
 /* Mapbox */
 import mapboxgl from 'mapbox-gl';
+import { CounterAloneComponent } from '../alone/components/counter-alone/counter-alone.component';
+import { SideMenuComponent } from '../alone/components/side-menu/side-menu.component';
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGFzaWxyb2dtYWlsY29tIiwiYSI6ImNseTRodGxxeDAyM20yaXM5NnVwbGtnZXIifQ.FVN7Zd6E5CiojbOCPNbA0g';
 
 
 @NgModule({
   declarations: [
     MiniMapComponent,
-    SideMenuComponent,
     MapsLayoutComponent,
     FullScreenPageComponent,
     MarkersPageComponent,
@@ -29,7 +29,9 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZGFzaWxyb2dtYWlsY29tIiwiYSI6ImNseTRodGxxeDAyM
   imports: [
     CommonModule,
     FormsModule,
-    MapsRoutingModule
+    MapsRoutingModule,
+    CounterAloneComponent,
+    SideMenuComponent
   ]
 })
 export class MapsModule { }
